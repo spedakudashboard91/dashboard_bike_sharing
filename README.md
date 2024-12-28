@@ -1,30 +1,19 @@
 # dashboard_bike_sharing
 Dashboard Analisis Data Sepeda
 Proyek ini adalah dashboard analisis data sepeda menggunakan Streamlit. Dashboard ini menampilkan data sepeda berdasarkan hari dan jam.
+Install Streamlit: First, you need to install Streamlit in your Colab environment. Run the following command:
 
-Cara Menjalankan Dashboard
-1. Persyaratan
-Pastikan Anda memiliki Python 3.6 atau lebih baru terinstal di sistem Anda. Anda juga perlu menginstal pip jika belum terinstal.
+!pip install streamlit
 
-2. Mengunduh Dataset
-Sebelum menjalankan dashboard, Anda perlu mengunduh dataset yang diperlukan. Dataset dapat diunduh dari Google Drive atau sumber lain. Pastikan Anda memiliki dua file CSV: day_dataset.csv dan hour_dataset.csv.
+Create Your Streamlit App: Write your Streamlit app code into a file named app.py. You can use the following command to create the file:
 
-3. Setting Environment
-Buat virtual environment (opsional) dan aktifkan:
+%%writefile app.py
+import streamlit as st
+st.title("Dashboard Analisis Penyewaan Sepeda")
+st.write("Selamat datang di dashboard penyewaan sepeda!")
 
-python -m venv venv
-source venv/bin/activate  # Untuk Linux/Mac
-venv\Scripts\activate  # Untuk Windows
+Install Localtunnel: To expose your Streamlit app to the internet, you can use Localtunnel. Install it using:
+!npm install -g localtunnel
 
-File Structures
-├── .streamlit
-├── Dashboard
-│   ├── dashboard_bike.py
-│   └── day.csv
-├── Dataset
-│   ├── day.csv
-│   ├── hour.csv
-|   └── Readme.txt
-├── README.md
-├── notebook1.ipynb
-└── requirements.txt
+Run the Streamlit App: Use the following command to run your Streamlit app and expose it using Localtunnel:
+!streamlit run app.py & npx localtunnel --port 8501
